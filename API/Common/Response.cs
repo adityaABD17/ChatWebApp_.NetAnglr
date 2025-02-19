@@ -1,0 +1,26 @@
+using System;
+namespace API.Common;
+
+public class Response<T>
+{
+    public bool IsSuccess { get; }
+
+    public T Data {get;}
+
+    public string? Error {get;}
+
+    public string? Message {get; set;}
+
+    public Response(bool isSucces, T data , string? error,string? message)
+    {
+        IsSuccess = isSucces;
+        Data = data;
+        Error = error;
+        Message = message;
+    }
+
+    public static Response<T> Success(T data,string? message = "") => new
+    (true, data, null,message);
+
+    public static Response<T> Failure(string error)=> new(false,default!,error,null);
+}

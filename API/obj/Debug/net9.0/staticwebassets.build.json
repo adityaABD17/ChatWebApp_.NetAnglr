@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "f2G+Z7p8Gb5aUBNUHE2nL2XUD/Vs+kq1GVF8/M7AE+o=",
+  "Source": "API",
+  "BasePath": "_content/API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "API\\wwwroot",
+      "Source": "API",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "BasePath": "_content/API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\0a31382a-1120-4d73-b64d-ffe083f06532.png",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "uploads/0a31382a-1120-4d73-b64d-ffe083f06532#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "61m47shq28",
+      "Integrity": "dtBaZZbgIar1WJiKAAFiIDtCY5lAeI14c183xOnm49Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0a31382a-1120-4d73-b64d-ffe083f06532.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/0a31382a-1120-4d73-b64d-ffe083f06532.61m47shq28.png",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\0a31382a-1120-4d73-b64d-ffe083f06532.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3748284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dtBaZZbgIar1WJiKAAFiIDtCY5lAeI14c183xOnm49Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 11:29:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "61m47shq28"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/0a31382a-1120-4d73-b64d-ffe083f06532.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dtBaZZbgIar1WJiKAAFiIDtCY5lAeI14c183xOnm49Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/0a31382a-1120-4d73-b64d-ffe083f06532.png",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\0a31382a-1120-4d73-b64d-ffe083f06532.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3748284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dtBaZZbgIar1WJiKAAFiIDtCY5lAeI14c183xOnm49Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 11:29:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dtBaZZbgIar1WJiKAAFiIDtCY5lAeI14c183xOnm49Q="
+        }
+      ]
+    }
+  ]
+}
