@@ -16,6 +16,12 @@ public class TokenService
     }
     public string GenerateToken(string userId,string userName)
     {
+
+        if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(userName))
+        {
+            throw new ArgumentNullException("UserId or UserName cannot be null or empty.");
+        }
+
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_config["JwtSetting:SecurityKey"]);
 

@@ -10,12 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 public static class AccountEndpoint
 {
-    public static RouteGroupBuilder MapAccountEndpoint(this WebApplication app)
+       public static RouteGroupBuilder MapAccountEndpoint(this WebApplication app)
     {
         var group = app.MapGroup("/api/account").WithTags("accounts");
 
-        group.MapPost("/register", async (HttpContext context, UserManager<AppUser> UserManager,
-        [FromForm] string fullName, [FromForm] string email, [FromForm] string password,[FromForm] string username,[FromForm] IFormFile?  profileImage) =>
+        _ = group.MapPost("/register", async (HttpContext context, UserManager<AppUser> UserManager,
+        [FromForm] string fullName, [FromForm] string email, [FromForm] string password, [FromForm] string username, [FromForm] IFormFile? profileImage) =>
         {
             var userFromDb = await UserManager.FindByEmailAsync(email);
 
@@ -24,7 +24,7 @@ public static class AccountEndpoint
                 return Results.BadRequest(Response<string>.Failure("User already exists."));
             }
 
-            if(profileImage is null)
+            if (profileImage is null)
             {
                 return Results.BadRequest(Response<string>.Failure("Profile image is required..."));
             }
@@ -37,9 +37,11 @@ public static class AccountEndpoint
             {
                 Email = email,
                 FullName = fullName, // Ensure AppUser has a FullName property
-                UserName = username ,    // Required for Identity
+                UserName = username,
                 ProfileImage = picture
             };
+
+            Console.WriteLine("Username"+user.UserName);
 
             var result = await UserManager.CreateAsync(user, password);
 
@@ -54,32 +56,54 @@ public static class AccountEndpoint
         }).DisableAntiforgery();
 
 
+
+
         // ###################################################################################################################endregion
 
-        group.MapPost("/login",async(UserManager<AppUser> UserManager,
-        TokenService tokenService , LoginDto dto) =>{
-            if(dto is null)
-            {
-                return Results.BadRequest(Response<string>.Failure("Invalid login details"));
-            }
+        var unused = group.MapPost("/login", async (UserManager<AppUser> userManager,
+                                      TokenService tokenService, LoginDto dto) =>
+       {
+           // Check if DTO is null
+           if (dto is null)
+           {
+               return Results.BadRequest(Response<string>.Failure("Empty login details"));
+           }
 
-            var user = await UserManager.FindByEmailAsync(dto.Email);
+           // Log email to make sure it's coming through
+           Console.WriteLine("Email: " + dto.Email);
 
-            if(user is null)
-            {
-                return Results.BadRequest(Response<string>.Failure("user not found"));
-            }
+           // Find user by email
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+           AppUser user = await userManager.FindByEmailAsync(dto.Email);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
-            var result = await UserManager.CheckPasswordAsync(user!,dto.password);
+           if (user is null)
+           {
+               // Provide a more informative error message
+               return Results.BadRequest(Response<string>.Failure("User not found"));
+           }
 
-            if(!result)
-            {
-                return Results.BadRequest(Response<string>.Failure("Invalid Password"));
-            }
+           // Check password validity
+           var result = await userManager.CheckPasswordAsync(user, dto.password);
+           if (!result)
+           {
+               // Return specific failure message for incorrect password
+               return Results.BadRequest(Response<string>.Failure("Password doesn't match"));
+           }
 
-            var token =tokenService.GenerateToken(user.Id,user.UserName);
-            return Results.Ok(Response<string>.Success(token,"Login Successfully"));
-        });
+           // Ensure userId and userName are not null or empty
+           if (string.IsNullOrEmpty(user.Id) || string.IsNullOrEmpty(user.UserName))
+           {
+               return Results.BadRequest(Response<string>.Failure("User information is incomplete"));
+           }
+
+           // Generate the JWT token
+           var token = tokenService.GenerateToken(user.Id, user.UserName);
+
+           // Return success response with token
+           return Results.Ok(Response<string>.Success(token, "Login Successful"));
+       });
+
 
 
         group.MapGet("/me",async (HttpContext context,UserManager<AppUser> userManager)=>{

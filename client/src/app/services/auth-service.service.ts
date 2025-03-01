@@ -8,18 +8,38 @@ import { ApiResponse } from '../models/api-response';
 })
 export class AuthServiceService {
 
-  private baseurl = "http://localhost:5000";
+  private baseurl = "http://localhost:5000/api/account";
 
-  httpClient = inject(HttpClient);
+  private token = "token";
+
+  private httpClient = inject(HttpClient);
 
   register(data:FormData) : Observable<ApiResponse<string>>{
     return this.httpClient.post<ApiResponse<string>>(
       `${this.baseurl}/register`,
       data
     ).pipe(tap((response)=>{
-      localStorage.setItem("token",response.data)
-    })
-  )
+      localStorage.setItem(this.token,response.data)
+    }))
+  }
+
+  login(email:string,password:string) : Observable<ApiResponse<string>>
+  {
+    return this.httpClient
+    .post<ApiResponse<string>>
+    (`${this.baseurl}/login`,{
+        email,
+        password,
+      }).pipe(tap((response)=>{
+        if(response.isSuccess)
+        {
+          localStorage.setItem(this.token,response.data)
+        }
+        
+        return response;
+
+      }))
+
   }
 
   constructor() { }

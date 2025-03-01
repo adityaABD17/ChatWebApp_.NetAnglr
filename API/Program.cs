@@ -7,67 +7,70 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors(
-    options=>{
-        options.AddDefaultPolicy(builder=>{
-            builder.WithOrigins("http://localhost:4200","https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
-        });
-    }
-);
+// Configure CORS with a named policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200", "https://localhost:4200") // Angular app origins
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // Allow credentials for cookies, etc.
+    });
+});
 
 var JwtSetting = builder.Configuration.GetSection("JwtSetting");
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// Add services to the container
 builder.Services.AddOpenApi();
-
 builder.Services.AddSignalR();
-
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlite("Data Source = chat.db"));
-
 builder.Services.AddIdentityCore<AppUser>()
-.AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<TokenService>();
 
-builder.Services.AddAuthentication(opt =>{
+// Configure Authentication
+builder.Services.AddAuthentication(opt =>
+{
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(option =>{
+})
+.AddJwtBearer(option =>
+{
     option.SaveToken = true;
     option.RequireHttpsMetadata = false;
-    option.TokenValidationParameters = new TokenValidationParameters{
+    option.TokenValidationParameters = new TokenValidationParameters
+    {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes
-        (JwtSetting.GetSection("SecurityKey").Value!)),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtSetting.GetSection("SecurityKey").Value!)),
         ValidateIssuer = false,
         ValidateAudience = false,
     };
 
-option.Events = new JwtBearerEvents{
-    OnMessageReceived = context=>{
-        var accessToken = context.Request.Query["access_token"];
-        var path = context.HttpContext.Request.Path;
-
-        if(!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hus"))
+    option.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
         {
-            context.Token = accessToken;
+            var accessToken = context.Request.Query["access_token"];
+            var path = context.HttpContext.Request.Path;
+
+            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hus"))
+            {
+                context.Token = accessToken;
+            }
+            return Task.CompletedTask;
         }
-        return Task.CompletedTask;
-    }
-};
-
+    };
 });
-
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -78,11 +81,10 @@ app.UseAuthentication();
 app.UseStaticFiles();
 app.UseAuthorization();
 
+// **Ensure CORS is used before any other middleware that handles requests.**
+app.UseCors("AllowLocalhost");  // Apply the named policy
+
 app.MapHub<ChatHub>("hubs/chat");
-
-app.UseCors(x=>x.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost4200","https://localhost4200"));
-
 app.MapAccountEndpoint();
 
 app.Run();
-
