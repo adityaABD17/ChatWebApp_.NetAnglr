@@ -8,15 +8,17 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router';
 
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule,MatIconModule,MatInputModule,CommonModule],
+  imports: [FormsModule,MatIconModule,MatInputModule,CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  emailPattern: string = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
   email! : string;
   password!:string;
   hide = signal(false);

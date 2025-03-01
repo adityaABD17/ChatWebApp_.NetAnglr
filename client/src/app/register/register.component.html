@@ -1,16 +1,16 @@
 <form 
 (ngSubmit)="register()"
 #userform = "ngForm"
-class="md:flex justify-center px-20 bg-white gap-10">
+class="md:flex justify-center px-10 bg-white gap-10 py-5 h-auto">
 
-    <div class="h-auto w-3/5" style="background-image: url('register-bg.svg'); background-repeat: no-repeat; 
-    background-size:contain; background-color: white;background-position: bottom;">
+    <div class="h-150 w-3/5 mt-0"  style="background-image: url('register-bg.svg'); background-repeat: no-repeat; 
+    background-size:contain; background-color: rgb(255, 255, 255);background-position: bottom;">
        <!-- Dummy div to add a space from above -->
     </div>
 
 
-    <div class="bg-white my-10 rounded w-1/4 flex flex-col gap-3 shadow-sm drop-shadow-md">
-        <div class="flex justify-center">
+    <div class="bg-white rounded w-1/4 flex flex-col shadow-sm drop-shadow-md mx-3 px-4">
+        <div class="flex justify-center mt-2">
             <img [src]="profilePicture" class="rounded-full object-cover bg-blue-800 h-24 w-24"/>
         </div>
 
@@ -26,13 +26,18 @@ class="md:flex justify-center px-20 bg-white gap-10">
                 matInput name="email" 
                 [(ngModel)]="email" 
                 #emailModel = "ngModel"
-                placeholder="Enter a valid email"/>
+                placeholder="example@gmail.com"
+                [pattern]="emailPattern"/>
 
                 @if(emailModel.errors?.['required']){
-                    <mat-error>
+                    <mat-error class="!text-red-500" >
                         Email is required
                     </mat-error>
                 }
+
+                <mat-error class="!text-red-500"  *ngIf="emailModel.errors?.['pattern']">
+                    Enter a valid email.
+                  </mat-error>
 
             </mat-form-field>
 
@@ -46,7 +51,7 @@ class="md:flex justify-center px-20 bg-white gap-10">
                 placeholder="Enter your full name"/>
 
                 @if(fullNameModel.errors?.['required']){
-                    <mat-error>
+                    <mat-error class="!text-red-500" >
                         Full Name is required
                     </mat-error>
                 }
@@ -63,7 +68,7 @@ class="md:flex justify-center px-20 bg-white gap-10">
                 placeholder="Enter User Name for display"/>
 
                 @if(userNameModel.errors?.['required']){
-                    <mat-error>
+                    <mat-error class="!text-red-500" >
                         User Name is required
                     </mat-error>
                 }
@@ -78,7 +83,7 @@ class="md:flex justify-center px-20 bg-white gap-10">
                     #passwordModel="ngModel"
                     placeholder="password" />
             
-                <mat-error *ngIf="passwordModel.errors?.['required']">
+                <mat-error class="!text-red-500"  *ngIf="passwordModel.errors?.['required']">
                     Password is required
                 </mat-error>
             
@@ -97,11 +102,11 @@ class="md:flex justify-center px-20 bg-white gap-10">
                     (ngModelChange)="validatePassword()" />
             
                 <!-- Show required error -->
-                <mat-error class="text-red-800" *ngIf="confirmPasswordModel.errors?.['required']">
+                <mat-error class="!text-red-500"  *ngIf="confirmPasswordModel.errors?.['required']">
                     Confirm Password is required
                 </mat-error>
 
-                <mat-error *ngIf="passwordMismatch && confirmPassword">
+                <mat-error class="!text-red-500"  *ngIf="passwordMismatch && confirmPassword">
                     Passwords do not match
                 </mat-error>
             
@@ -113,7 +118,7 @@ class="md:flex justify-center px-20 bg-white gap-10">
                 </mat-icon>
                 
             </mat-form-field>
-            <span class="text-red-600"*ngIf="passwordMismatch">
+            <span class="!text-red-500"  *ngIf="passwordMismatch">
                 *Passwords do not match
             </span>
             
@@ -128,6 +133,12 @@ class="md:flex justify-center px-20 bg-white gap-10">
                     <mat-icon>add_a_photo</mat-icon>
                     <span>Upload Image</span>
                 </button>
+
+                <div>
+                    <h5>Already have an account?</h5>
+                    <!-- Add RouterLink to the Register page -->
+                    <a class="text-blue-500" routerLink="/login" class="text-blue-400 hover:underline">Login</a>
+                </div>
 
             <button 
             [disabled]="!userform.valid || password !== confirmPassword"

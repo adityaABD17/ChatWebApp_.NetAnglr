@@ -9,21 +9,23 @@ import { MatIcon} from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
  
 @Component({
   selector: 'app-register',
-  imports: [CommonModule,MatFormFieldModule,MatInputModule,FormsModule,MatButtonModule,MatIcon],
+  imports: [CommonModule,MatFormFieldModule,MatInputModule,FormsModule,MatButtonModule,MatIcon,RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
 
+  emailPattern: string = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
+
   email!:string;
   password!:string;
   fullname!:string;
   username!:string;
-  profilePicture:string = 'http://randomuser.me/api/portraits/lego/5.jpg';
+  profilePicture:string = 'https://img.icons8.com/?size=100&id=YRJN4lBDhzh8&format=png&color=000000';
   profileImage : File | null = null;
   confirmPassword!:string;
   hide = signal(false);
