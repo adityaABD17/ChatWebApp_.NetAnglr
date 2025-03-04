@@ -1,0 +1,30 @@
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#resizer {
+    width: 6px;
+    cursor: ew-resize;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  
+  #resizer:hover {
+    background: #999;
+  }
+  
+  #resizer span {
+    font-size: 14px;
+    color: #666;
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Allow dragging without interfering */
+  }

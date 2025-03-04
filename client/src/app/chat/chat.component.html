@@ -1,1 +1,21 @@
-<p>chat works!</p>
+<div class="flex h-screen rounded-3xl">
+    <!-- Sidebar with Resizable Feature -->
+    <div id="sidebar" class="flex-col bg-white border-r h-screen overflow-y-auto scrollbar-hide w-1/3 min-w-[200px] max-w-[50%]">
+        <app-chat-sidebar />
+    </div>
+
+    
+    <!-- Resizer with Icons -->
+    <div id="resizer" class="w-6 bg-gray-300 cursor-ew-resize flex items-center justify-center relative">
+        <span class="text-gray-600 text-lg select-none">◀=▶</span>
+    </div>
+
+    <!-- Fixed Chat Window and Right Panel -->
+    <div class="flex flex-grow">
+        <div class="w-1/2 h-screen sticky top-0">
+            <app-chat-window />
+            <div id="resizer" class="w-2 bg-red-500 cursor-ew-resize"></div>
+        </div>
+        <div class="bg-gray-200 border-l w-1/2 h-screen sticky top-0"></div>
+    </div>
+</div>

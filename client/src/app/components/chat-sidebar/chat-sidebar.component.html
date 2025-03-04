@@ -1,0 +1,52 @@
+<div class="p-4">
+    <div class="flex items-center justify-between bg-white z-10 sticky top-0 p-1 w-full">
+        <div class="flex items-center">
+            <img class="h-10 w-10 rounded-full border-gray-100 border-2 object-cover"
+                src="https://randomuser.me/api/portraits/women/87.jpg" alt="Profile Pictures">
+                <div class="font-medium ml-2 text-black">
+                    Jhon Doe
+                </div>
+        </div>
+        <div>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="!text-black">more_vert</mat-icon>
+            </button>
+            <mat-menu  #menu="matMenu">    
+                <button mat-menu-item>
+                    <mat-icon>logout</mat-icon>
+                    <span>
+                        Logout
+                    </span>
+                </button>
+            </mat-menu>
+        </div>   
+    </div> 
+    <div class="relative flex mt-4 items-center gap-2 justify-between">
+        <input placeholder="Search" type="text" class="bg-slate-100 border-1 focus:ring-1
+         focus:ring-slate-100 focus:outline-none w-full mb-3 border-slate-50 p-1 pl-10 text-slate-700 
+         font-normal px-3 rounded-md"/>
+         <mat-icon class="absolute text-gray-400 left-2 top-1 pr-3">search</mat-icon>
+    </div>
+
+
+    @for(item of [1,2,3,4,5,6,7,8,9,10];track item)
+    {
+        <div class="py-1 overflow-y-auto scroll-smooth">
+            <div class="flex items-center gap-2 py-2">
+                    <img src="https://randomuser.me/api/portraits/women/87.jpg" class="'h-10 w-10 rounded-full" alt="">
+                
+                <div>
+                    <span class="text-base text-gray-600 font-normal">Jhon Doe</span>
+                    <p class="text-xs text-slate-400">
+                        3 new messages
+                    </p>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    }
+
+   
+</div>

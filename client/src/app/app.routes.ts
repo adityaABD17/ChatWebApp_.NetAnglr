@@ -9,4 +9,8 @@ export const routes: Routes = [
         path:"login",
         loadComponent:()=>import("./login/login.component").then(x=>x.LoginComponent),
     },
+    {
+        path:"chat",
+        loadComponent:()=>import("./chat/chat.component").then(x=>x.ChatComponent),
+    },
 ];
