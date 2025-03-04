@@ -11,31 +11,35 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class ChatSidebarComponent implements AfterViewInit {
   ngAfterViewInit() {
-      this.initResizer();
+    this.initResizer("left-sidebar", "left-resizer", false);
+    this.initResizer("right-sidebar", "right-resizer", true);
   }
 
-
-  initResizer() {
-    const sidebar = document.getElementById('sidebar');
-    const resizer = document.getElementById('resizer');
+  initResizer(sidebarId: string, resizerId: string, isRight: boolean) {
+    const sidebar = document.getElementById(sidebarId);
+    const resizer = document.getElementById(resizerId);
     let isResizing = false;
 
-    resizer?.addEventListener('mousedown', (e) => {
+    resizer?.addEventListener("mousedown", () => {
       isResizing = true;
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', () => {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", () => {
         isResizing = false;
-        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener("mousemove", handleMouseMove);
       });
     });
 
     function handleMouseMove(e: MouseEvent) {
       if (isResizing && sidebar) {
-        let newWidth = e.clientX;
+        let newWidth = isRight
+          ? window.innerWidth - e.clientX // Right sidebar width
+          : e.clientX; // Left sidebar width
+
         newWidth = Math.max(200, newWidth); // Min width 200px
-        newWidth = Math.min(window.innerWidth * 0.5, newWidth); // Max width 50% of screen
+        newWidth = Math.min(window.innerWidth * 0.4, newWidth); // Max width 40% of screen
         sidebar.style.width = `${newWidth}px`;
       }
     }
   }
+
 }

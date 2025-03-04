@@ -1,21 +1,22 @@
 <div class="flex h-screen rounded-3xl">
-    <!-- Sidebar with Resizable Feature -->
-    <div id="sidebar" class="flex-col bg-white border-r h-screen overflow-y-auto scrollbar-hide w-1/3 min-w-[200px] max-w-[50%]">
+    <div id="left-sidebar" class="flex-col bg-white border-r h-screen overflow-y-auto scrollbar-hide w-1/4 min-w-[200px] max-w-[40%]">
         <app-chat-sidebar />
     </div>
 
-    
-    <!-- Resizer with Icons -->
-    <div id="resizer" class="w-6 bg-gray-300 cursor-ew-resize flex items-center justify-center relative">
-        <span class="text-gray-600 text-lg select-none">◀=▶</span>
+    <!-- Left Resizer -->
+    <div id="left-resizer" class="w-6 bg-gray-300 cursor-ew-resize flex items-center justify-center relative">
+        <span class="text-gray-600 text-lg select-none">◀▶</span>
     </div>
 
-    <!-- Fixed Chat Window and Right Panel -->
-    <div class="flex flex-grow">
-        <div class="w-1/2 h-screen sticky top-0">
-            <app-chat-window />
-            <div id="resizer" class="w-2 bg-red-500 cursor-ew-resize"></div>
-        </div>
-        <div class="bg-gray-200 border-l w-1/2 h-screen sticky top-0"></div>
+    <!-- Chat Window (Fixed Center Section) -->
+    <div id="chat-window" class="flex-grow h-screen sticky top-0 bg-white flex items-center justify-center">
+        <app-chat-window />
     </div>
+
+    <!-- Right Resizer -->
+    <div id="right-resizer" class="w-6 bg-gray-300 cursor-ew-resize flex items-center justify-center relative">
+        <span class="text-gray-600 text-lg select-none">◀▶</span>
+    </div>
+
+    <div id="right-sidebar" class="flex-col bg-gray-200 border-l h-screen overflow-y-auto scrollbar-hide w-1/4 min-w-[200px] max-w-[40%]"></div>
 </div>

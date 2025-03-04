@@ -8,7 +8,8 @@
     scrollbar-width: none; /* Firefox */
 }
 
-#resizer {
+/* General Resizer Styling */
+#left-resizer, #right-resizer {
     width: 6px;
     cursor: ew-resize;
     background: #ccc;
@@ -18,13 +19,15 @@
     transition: background 0.3s;
   }
   
-  #resizer:hover {
+  #left-resizer:hover, #right-resizer:hover {
     background: #999;
   }
   
-  #resizer span {
+  /* Icon Styling */
+  #left-resizer span, #right-resizer span {
     font-size: 14px;
     color: #666;
     user-select: none; /* Prevent text selection */
-    pointer-events: none; /* Allow dragging without interfering */
+    pointer-events: none; /* Allow dragging */
   }
+  
