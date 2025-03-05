@@ -1,7 +1,9 @@
-import { Component,AfterViewInit } from '@angular/core';
+import { Component,AfterViewInit, inject } from '@angular/core';
 import { MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat-sidebar',
@@ -10,10 +12,14 @@ import { MatMenuModule } from '@angular/material/menu';
   styles: ``
 })
 export class ChatSidebarComponent implements AfterViewInit {
+
   ngAfterViewInit() {
     this.initResizer("left-sidebar", "left-resizer", false);
     this.initResizer("right-sidebar", "right-resizer", true);
   }
+
+  authService = inject(AuthService);
+  router = inject(Router)
 
   initResizer(sidebarId: string, resizerId: string, isRight: boolean) {
     const sidebar = document.getElementById(sidebarId);
@@ -40,6 +46,12 @@ export class ChatSidebarComponent implements AfterViewInit {
         sidebar.style.width = `${newWidth}px`;
       }
     }
+  }
+
+  logout()
+  {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 
 }

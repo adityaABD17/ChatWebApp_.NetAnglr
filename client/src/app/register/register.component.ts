@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthServiceService } from '../services/auth-service.service';
+import { AuthService } from '../services/auth.service';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule } from '@angular/forms';
@@ -32,7 +32,7 @@ export class RegisterComponent {
   cHide = signal(false);
   passwordMismatch: boolean = false;
 
-  authService = inject(AuthServiceService);
+  authService = inject(AuthService);
   snackBar = inject(MatSnackBar);
   router = inject(Router);
 

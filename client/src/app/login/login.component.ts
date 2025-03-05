@@ -2,7 +2,7 @@ import { Component,inject,signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { AuthServiceService } from '../services/auth-service.service';
+import { AuthService } from '../services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
@@ -23,7 +23,7 @@ export class LoginComponent {
   password!:string;
   hide = signal(false);
 
-  authService = inject(AuthServiceService);
+  authService = inject(AuthService);
   snackBar = inject(MatSnackBar);
   router = inject(Router)
 
@@ -37,6 +37,7 @@ export class LoginComponent {
   {
     this.authService.login(this.email,this.password).subscribe({
       next:()=>{
+        this.authService.me().subscribe();
         this.snackBar.open("Login Succesful...","Close");
       },
       error:(error: HttpErrorResponse)=>{
