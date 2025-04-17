@@ -146,7 +146,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
             UserName = u.UserName,
             FullName = u.FullName,
             ProfilePicture = u.ProfileImage,
-            IsOnline = onlineUsersSet.Contains(u.UserName),
+            IsOnline = onlineUsersSet.Contains(u.UserName!),
             UnreadCount = context.Messages.Count(x=>x.ReceiverId == username && x.
             SenderId == u.Id && !x.IsRead)
     }).OrderByDescending(u => u.IsOnline)

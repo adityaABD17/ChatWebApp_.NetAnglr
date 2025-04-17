@@ -1,32 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\0216d263-edfe-412c-ba11-6a7d4ffc2300.JPG",
-      "PackagePath": "staticwebassets\\uploads\\0216d263-edfe-412c-ba11-6a7d4ffc2300.JPG"
+      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "PackagePath": "staticwebassets\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg"
     },
     {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\244a28c6-ebcb-46fa-898c-74c930eaddf5.jpg",
-      "PackagePath": "staticwebassets\\uploads\\244a28c6-ebcb-46fa-898c-74c930eaddf5.jpg"
+      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg"
     },
     {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\558cf86c-cbcc-47fa-b107-f8fe41e6e8bb.jpg",
-      "PackagePath": "staticwebassets\\uploads\\558cf86c-cbcc-47fa-b107-f8fe41e6e8bb.jpg"
-    },
-    {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\5a59ea2b-d65d-4b61-abb7-984dc86ab046.jpg",
-      "PackagePath": "staticwebassets\\uploads\\5a59ea2b-d65d-4b61-abb7-984dc86ab046.jpg"
-    },
-    {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\863ddb36-9864-44ba-aa9c-333f61045ab8.JPG",
-      "PackagePath": "staticwebassets\\uploads\\863ddb36-9864-44ba-aa9c-333f61045ab8.JPG"
-    },
-    {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\b5bf5fbd-a91f-4fca-a309-1fb53c70c68f.png",
-      "PackagePath": "staticwebassets\\uploads\\b5bf5fbd-a91f-4fca-a309-1fb53c70c68f.png"
-    },
-    {
-      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\b8bee445-8c78-41f6-bb91-1e7e4bf7979b.JPG",
-      "PackagePath": "staticwebassets\\uploads\\b8bee445-8c78-41f6-bb91-1e7e4bf7979b.JPG"
+      "Id": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
+      "PackagePath": "staticwebassets\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -59,7 +59,7 @@ builder.Services.AddAuthentication(opt =>
             var accessToken = context.Request.Query["access_token"];
             var path = context.HttpContext.Request.Path;
 
-            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hus"))
+            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
             {
                 context.Token = accessToken;
             }
@@ -76,13 +76,13 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// **Ensure CORS is used before any other middleware that handles requests.**
+app.UseCors("AllowLocalhost");  // Apply the named policy
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseStaticFiles();
 app.UseAuthorization();
-
-// **Ensure CORS is used before any other middleware that handles requests.**
-app.UseCors("AllowLocalhost");  // Apply the named policy
 
 app.MapHub<ChatHub>("hubs/chat");
 app.MapAccountEndpoint();

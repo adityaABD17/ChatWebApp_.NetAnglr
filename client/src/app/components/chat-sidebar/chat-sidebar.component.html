@@ -2,9 +2,9 @@
     <div class="flex items-center justify-between bg-white z-10 sticky top-0 p-1 w-full">
         <div class="flex items-center">
             <img class="h-10 w-10 rounded-full border-gray-100 border-2 object-cover"
-                src="https://randomuser.me/api/portraits/women/87.jpg" alt="Profile Pictures">
+                [src]="authService.currentLoggedUser!.profileImage" alt="Profile Pictures">
                 <div class="font-medium ml-2 text-black">
-                    Jhon Doe
+                    {{authService.currentLoggedUser?.fullName | titlecase}}
                 </div>
         </div>
         <div>
@@ -30,18 +30,30 @@
     </div>
 
 
-    @for(item of [1,2,3,4,5,6,7,8,9,10];track item)
+    @for(user of chatService.onlineUsers() ;track user)
     {
         <div class="py-1 overflow-y-auto scroll-smooth">
             <div class="flex items-center gap-2 py-2">
-                    <img src="https://randomuser.me/api/portraits/women/87.jpg" class="'h-10 w-10 rounded-full" alt="">
+                    <img [src]="user.profilePicture" class="'h-10 w-10 rounded-full" alt="">
                 
                 <div>
-                    <span class="text-base text-gray-600 font-normal">Jhon Doe</span>
+                    <span class="text-base text-gray-600 font-normal">{{user!.fullName  | titlecase}}</span>
                     <p class="text-xs text-slate-400">
-                        3 new messages
+                        {{user.unreadCount ? user.unreadCount + 'new messages' :''}}
                     </p>
                 </div>
+
+                @if(user.isOnline){
+                    <div class="ml-auto font-medium text-xs">
+                        <div class="bg-green-600 w-2 h-2 rounded-full">
+
+                        </div>
+                    </div>
+                }@else {
+                    <div class="bg-green-100 w-2 h-2 rounded-full">
+
+                    </div>
+                }
     
             </div>
     

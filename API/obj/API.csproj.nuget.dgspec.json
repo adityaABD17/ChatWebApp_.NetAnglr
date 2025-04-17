@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\API.csproj": {}
+    "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\API.csproj": {
+    "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\API.csproj",
+        "projectPath": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\API.csproj",
         "packagesPath": "C:\\Users\\adity\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\",
+        "outputPath": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

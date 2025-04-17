@@ -1,17 +1,22 @@
-import { Component,AfterViewInit, inject } from '@angular/core';
+import { Component,AfterViewInit, inject, OnInit } from '@angular/core';
 import { MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { AuthService } from '../../services/auth.service';
+import { ChatService } from '../../services/chat.service';
 import { Router } from '@angular/router';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-chat-sidebar',
-  imports: [MatIconButton,MatIconModule,MatMenuModule],
+  imports: [MatIconButton,MatIconModule,MatMenuModule,TitleCasePipe],
   templateUrl: './chat-sidebar.component.html',
   styles: ``
 })
-export class ChatSidebarComponent implements AfterViewInit {
+export class ChatSidebarComponent implements AfterViewInit,OnInit {
+  ngOnInit(): void {
+    this.chatService.startConnection(this.authService.getAccesToken!);
+  }
 
   ngAfterViewInit() {
     this.initResizer("left-sidebar", "left-resizer", false);
@@ -19,6 +24,7 @@ export class ChatSidebarComponent implements AfterViewInit {
   }
 
   authService = inject(AuthService);
+  chatService = inject(ChatService);
   router = inject(Router)
 
   initResizer(sidebarId: string, resizerId: string, isRight: boolean) {

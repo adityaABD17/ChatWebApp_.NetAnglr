@@ -64,4 +64,13 @@ export class AuthService {
     localStorage.removeItem('user');
   }
 
+
+  get currentLoggedUser() : User | null
+  {
+
+    const user:User = JSON.parse(localStorage.getItem('user') || '{}') ;
+    return user;
+
+  }
+
 }
