@@ -6,6 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import { ChatService } from '../../services/chat.service';
 import { Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-chat-sidebar',
@@ -14,6 +15,7 @@ import { TitleCasePipe } from '@angular/common';
   styles: ``
 })
 export class ChatSidebarComponent implements AfterViewInit,OnInit {
+
   ngOnInit(): void {
     this.chatService.startConnection(this.authService.getAccesToken!);
   }
@@ -58,6 +60,16 @@ export class ChatSidebarComponent implements AfterViewInit,OnInit {
   {
     this.authService.logout();
     this.router.navigate(['/login']);
+    this.chatService.disconnectConnection();
   }
+
+  onImgError(event:Event) {
+    (event.target as HTMLImageElement).src="default-profile.png"
+    }
+
+    openChatWindow(user:User)
+    {
+      this.chatService.currentOpenedChat.set(user);
+    }
 
 }

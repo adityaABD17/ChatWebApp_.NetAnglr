@@ -42,9 +42,20 @@ export class LoginComponent {
       },
       error:(error: HttpErrorResponse)=>{
         let err = error.error as ApiResponse<string>;
-        this.snackBar.open(err.error,"Close",{
-          duration:3000,
-        });
+
+        console.log(err.error);
+
+        if(err.error == undefined)
+        {
+          this.snackBar.open("Unable to connect to the server...","Close",{
+            duration:3000,
+          });
+        }else{
+          this.snackBar.open(err.error,"Close",{
+            duration:3000,
+          });
+        }
+        
       },
       complete:()=>{
         this.router.navigate(['/']);
