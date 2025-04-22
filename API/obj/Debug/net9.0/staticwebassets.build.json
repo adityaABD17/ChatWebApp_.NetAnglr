@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FWtKYkraEAfrepLmKoOo2mRDqTAOaiUDauDBSsTAreI=",
+  "Hash": "v9Lv0ySzjTU+Pr1uV8guZSNajwWZqw1XWFXBKcuyEcI=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52#[.{fingerprint=x4mqrksb4p}]?.svg.gz",
       "AssetKind": "All",
@@ -28,20 +28,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "RelatedAsset": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "rng74u0f0s",
       "Integrity": "F8xAx5+/xvtebL3dxtYxKhMWaLlGuxSgJ49+dHh3WGU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg"
+      "OriginalItemSpec": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b#[.{fingerprint=vg6r5r2af6}]?.svg.gz",
       "AssetKind": "All",
@@ -49,20 +49,41 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
+      "RelatedAsset": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "0f7r2rko0i",
       "Integrity": "tNM+rzHTmnWED47DWQoJP/f/hEEZQ6ToudTCd8VzZ2Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg"
+      "OriginalItemSpec": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253#[.{fingerprint}]?.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ynulbyl73f",
+      "Integrity": "flECe/BhNd1CJIutGPtAZyTUtHfzM+qIPOy+0kN6v/Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -80,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/3a3d71a8-aa01-4512-bcfa-7607561a6a3d#[.{fingerprint}]?.JPG",
       "AssetKind": "All",
@@ -101,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/8a08636d-344e-49d6-b967-05bcb068fbc9#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -122,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/9ad13bfa-caf1-4196-9a31-015832bb4bed#[.{fingerprint}]?.JPG",
       "AssetKind": "All",
@@ -143,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG"
     },
     {
-      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
+      "Identity": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -166,8 +187,90 @@
   ],
   "Endpoints": [
     {
+      "Route": "uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13701609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"flECe/BhNd1CJIutGPtAZyTUtHfzM+qIPOy+0kN6v/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 11:27:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-flECe/BhNd1CJIutGPtAZyTUtHfzM+qIPOy+0kN6v/Y="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.ynulbyl73f.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13701609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"flECe/BhNd1CJIutGPtAZyTUtHfzM+qIPOy+0kN6v/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 11:27:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ynulbyl73f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-flECe/BhNd1CJIutGPtAZyTUtHfzM+qIPOy+0kN6v/Y="
+        }
+      ]
+    },
+    {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -222,7 +325,7 @@
     },
     {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -259,7 +362,7 @@
     },
     {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.svg.gz",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -304,7 +407,7 @@
     },
     {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.x4mqrksb4p.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -367,7 +470,7 @@
     },
     {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.x4mqrksb4p.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -412,7 +515,7 @@
     },
     {
       "Route": "uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.x4mqrksb4p.svg.gz",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\h33os0px2k-x4mqrksb4p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -465,7 +568,7 @@
     },
     {
       "Route": "uploads/3a3d71a8-aa01-4512-bcfa-7607561a6a3d.fcz0pvrgn0.JPG",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -510,7 +613,7 @@
     },
     {
       "Route": "uploads/3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\3a3d71a8-aa01-4512-bcfa-7607561a6a3d.JPG",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -547,7 +650,7 @@
     },
     {
       "Route": "uploads/8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -584,7 +687,7 @@
     },
     {
       "Route": "uploads/8a08636d-344e-49d6-b967-05bcb068fbc9.rfj8ff5320.jpg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\8a08636d-344e-49d6-b967-05bcb068fbc9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -629,7 +732,7 @@
     },
     {
       "Route": "uploads/9ad13bfa-caf1-4196-9a31-015832bb4bed.fcz0pvrgn0.JPG",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -674,7 +777,7 @@
     },
     {
       "Route": "uploads/9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\9ad13bfa-caf1-4196-9a31-015832bb4bed.JPG",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -711,7 +814,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -766,7 +869,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -803,7 +906,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg.gz",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -848,7 +951,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.vg6r5r2af6.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -911,7 +1014,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.vg6r5r2af6.svg",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\wwwroot\\uploads\\a040e639-ab0a-4953-9f5c-dd3f7468f44b.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -956,7 +1059,7 @@
     },
     {
       "Route": "uploads/a040e639-ab0a-4953-9f5c-dd3f7468f44b.vg6r5r2af6.svg.gz",
-      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\api\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
+      "AssetFile": "C:\\Users\\adity\\OneDrive\\Desktop\\Chat\\API\\obj\\Debug\\net9.0\\compressed\\hf713t4a31-vg6r5r2af6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {

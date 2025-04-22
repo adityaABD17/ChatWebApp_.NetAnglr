@@ -2,6 +2,7 @@ import { inject, Injectable, signal } from '@angular/core';
 import { User } from '../models/user';
 import { AuthService } from './auth.service';
 import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
+import { Message } from '../models/message';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class ChatService {
 
   onlineUsers = signal<User[]>([]);
   currentOpenedChat = signal<User|null>(null)
+  chatMessages = signal<Message[]>([]);
+  isLoading = signal<boolean>(true);
 
 
   private hubConnection?:HubConnection;
@@ -36,12 +39,35 @@ export class ChatService {
         console.log('Connection or login error',error);
       });
 
+
+      this.hubConnection!.on('Notify',(user:User)=>{
+        Notification.requestPermission().then((result)=>{
+
+          if(result == 'granted')
+          {
+            new Notification('Active Now ',{
+              body: user.fullName + ' is active now',
+              icon: user.profileImage,
+            });
+          }
+         
+        });
+      })
+
       this.hubConnection!.on('OnlineUsers',(user:User[])=>{
         console.log(user);
         this.onlineUsers.update(()=>
           user.filter(user=>user.userName !== this.authService.currentLoggedUser!.userName)
-        )
-      })
+        );
+      });
+
+      this.hubConnection!.on('RecieveMessageList', (message) => {
+        if (Array.isArray(message) && message.length > 0) {
+          this.chatMessages.update(messages => [...message, ...messages]); // prepend if needed
+        }
+        this.isLoading.update(() => false);
+      });
+      
   }
 
   disconnectConnection(){
@@ -50,4 +76,34 @@ export class ChatService {
       this.hubConnection.stop().catch(err=>console.log(err));
     }
   }
+
+  status(userName: string):string {
+
+      const currentChatUser = this.currentOpenedChat();
+      if(!currentChatUser){
+        return "Offline"
+      }
+
+      const onlineUser = this.onlineUsers().find(
+        (user)=>user.userName === userName
+      )
+      return onlineUser?.isTyping ? 'Typing...' : this.isUserOnline();
+
+    }
+
+    isUserOnline() : string{
+      let onlineUser = this.onlineUsers().find(user=>user.userName === this.currentOpenedChat()?.userName);
+      return onlineUser?.isOnline ? 'online' : this.currentOpenedChat()!.userName;
+    }
+
+    loadMessages(pageNumber : number)
+    {
+      this.hubConnection?.invoke("LoadMessages",this.currentOpenedChat()?.id,pageNumber)
+      .then()
+      .catch()
+      .finally(()=>{
+        this.isLoading.update(()=>false);
+      })
+    }
+
 }

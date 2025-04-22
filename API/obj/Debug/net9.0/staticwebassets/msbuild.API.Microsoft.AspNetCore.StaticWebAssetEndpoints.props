@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/API/uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-flECe/BhNd1CJIutGPtAZyTUtHfzM\u002BqIPOy\u002B0kN6v/Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"13701609"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022flECe/BhNd1CJIutGPtAZyTUtHfzM\u002BqIPOy\u002B0kN6v/Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 18 Apr 2025 11:27:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API/uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.ynulbyl73f.JPG">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ynulbyl73f"},{"Name":"integrity","Value":"sha256-flECe/BhNd1CJIutGPtAZyTUtHfzM\u002BqIPOy\u002B0kN6v/Y="},{"Name":"label","Value":"_content/API/uploads/13c5d7e9-7bbe-4d41-bab0-2efff0f3c253.JPG"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13701609"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022flECe/BhNd1CJIutGPtAZyTUtHfzM\u002BqIPOy\u002B0kN6v/Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 18 Apr 2025 11:27:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/API/uploads/151085d7-9b75-4c3b-9fed-76d684c8cd52.svg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\151085d7-9b75-4c3b-9fed-76d684c8cd52.svg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

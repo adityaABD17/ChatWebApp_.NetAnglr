@@ -67,9 +67,10 @@ export class ChatSidebarComponent implements AfterViewInit,OnInit {
     (event.target as HTMLImageElement).src="default-profile.png"
     }
 
-    openChatWindow(user:User)
-    {
-      this.chatService.currentOpenedChat.set(user);
-    }
+  openChatWindow(user:User)
+  {
+    this.chatService.currentOpenedChat.set(user);
+    this.chatService.loadMessages(1);
+  }  
 
 }

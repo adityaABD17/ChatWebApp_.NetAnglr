@@ -113,7 +113,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
         }
 
         await Clients.User(currentUser.Id)
-        .SendAsync("RecievedMessageList",messages);
+        .SendAsync("RecieveMessageList",messages);
         
     }
 

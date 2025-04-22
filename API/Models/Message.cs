@@ -17,6 +17,4 @@ public class Message
     public bool IsRead { get; set; }
 
     public AppUser? Sender { get; set; }
-
-    public AppUser? MyProperty { get; set; }
 }
