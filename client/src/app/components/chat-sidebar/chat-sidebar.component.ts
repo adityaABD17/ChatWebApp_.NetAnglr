@@ -7,10 +7,11 @@ import { ChatService } from '../../services/chat.service';
 import { Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
 import { User } from '../../models/user';
+import { TypingIndicatorComponent } from '../typing-indicator/typing-indicator.component';
 
 @Component({
   selector: 'app-chat-sidebar',
-  imports: [MatIconButton,MatIconModule,MatMenuModule,TitleCasePipe],
+  imports: [MatIconButton,MatIconModule,MatMenuModule,TitleCasePipe,TypingIndicatorComponent],
   templateUrl: './chat-sidebar.component.html',
   styles: ``
 })

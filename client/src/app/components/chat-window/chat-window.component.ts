@@ -7,13 +7,14 @@ import { ChatBoxComponent } from "../chat-box/chat-box.component";
 
 @Component({
   selector: 'app-chat-window',
-  imports: [TitleCasePipe, MatIconModule, FormsModule, ChatBoxComponent],
+  imports: [TitleCasePipe, MatIconModule, FormsModule, ChatBoxComponent,],
   templateUrl: './chat-window.component.html',
   styles: ``
 })
 export class ChatWindowComponent {
 sendMessage() {
-throw new Error('Method not implemented.');
+// throw new Error('Method not implemented.');
+console.log("inside sendMessage()");
 }
 
   chatService = inject(ChatService);
