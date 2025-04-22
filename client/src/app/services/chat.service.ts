@@ -29,7 +29,6 @@ export class ChatService {
         accessTokenFactory:()=> token,
       }).withAutomaticReconnect().build();
 
-
       this.hubConnection
       .start()
       .then(()=>{
@@ -91,10 +90,16 @@ export class ChatService {
 
       this.hubConnection!.on('RecieveMessageList', (message) => {
         if (Array.isArray(message) && message.length > 0) {
-          this.chatMessages.update(messages => [...message, ...messages]); // prepend if needed
+          this.chatMessages.update((messages) => [...message, ...messages]); // prepend if needed
         }
         this.isLoading.update(() => false);
       });
+
+      this.hubConnection!.on('ReceiveNewMessage',(message:Message)=>{
+        document.title = '(1) new Message';
+
+        this.chatMessages.update((messages)=>[...messages,message])
+      })
       
   }
 
@@ -103,6 +108,30 @@ export class ChatService {
     {
       this.hubConnection.stop().catch(err=>console.log(err));
     }
+  }
+
+  sendMessage(message : string)
+  {
+    this.chatMessages.update((messages)=>[
+      ...messages,
+      {
+        content:message,
+        senderId:this.authService.currentLoggedUser!.id,
+        receiverId:this.currentOpenedChat()?.id!,
+        createdDate: new Date().toString(),
+        isRead : false,
+        id:0
+      }
+    ])
+
+    this.hubConnection?.invoke('SendMessage',{receiverId:this.currentOpenedChat()?.id,
+      senderId:this.authService.currentLoggedUser?.id,
+      content:message
+    }).then((id)=>{
+      console.log("message sent to : "+id);
+    }).catch((error)=>{
+      console.log(error);
+    })
   }
 
   status(userName: string):string {

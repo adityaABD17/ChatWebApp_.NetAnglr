@@ -12,12 +12,13 @@ import { ChatBoxComponent } from "../chat-box/chat-box.component";
   styles: ``
 })
 export class ChatWindowComponent {
-sendMessage() {
-// throw new Error('Method not implemented.');
-console.log("inside sendMessage()");
-}
-
   chatService = inject(ChatService);
   message: string = '';
+
+  sendMessage() {
+    console.log(this.message)
+    if(!this.message) return;
+    this.chatService.sendMessage(this.message)
+  }
 
 }

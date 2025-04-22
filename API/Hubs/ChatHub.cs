@@ -32,7 +32,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
             var user = new OnlineUserDto{
                 ConnectionId = connectionId,
                 UserName = userName,
-                ProfilePicture =currentUser.ProfileImage,
+                ProfilePicture =currentUser!.ProfileImage,
                 FullName=currentUser.FullName
             };
 
@@ -51,8 +51,8 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
 
     public async Task SendMessage(MessageRequestDto message)
     {
-        var senderId = Context.User!.Identity.Name;
-        var recipientId = message.RecieverId;
+        var senderId = Context.User!.Identity!.Name;
+        var recipientId = message.ReceiverId;
 
         var newMsg = new Message{
             Sender = await userManager.FindByNameAsync(senderId!),
@@ -65,14 +65,14 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
         context.Messages.Add(newMsg);
         await context.SaveChangesAsync();
 
-        await Clients.User(recipientId).SendAsync("Recieving new Message",newMsg);
+        await Clients.User(recipientId!).SendAsync("Recieving new Message",newMsg);
     }
 
 
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
         var username = Context.User!.Identity!.Name;
-        onlineUsers.TryRemove(username,out _);
+        onlineUsers.TryRemove(username!,out _);
         await Clients.All.SendAsync("OnlineUsers",await GetAllUsers());
     }
 
@@ -97,7 +97,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context): Hub
             Id = x.Id,
             Content = x.Content,
             CreatedDate = x.CreatedDate,
-            RecieverId = x.ReceiverId,
+            ReceiverId = x.ReceiverId,
             SenderId = x.SenderId
         }).ToListAsync();
 

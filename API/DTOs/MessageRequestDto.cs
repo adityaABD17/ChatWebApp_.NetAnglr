@@ -8,7 +8,7 @@ public class MessageRequestDto
 
     public string? SenderId { get; set; }
 
-    public string? RecieverId { get; set;}
+    public string? ReceiverId { get; set;}
 
     public string? Content { get; set; }
 

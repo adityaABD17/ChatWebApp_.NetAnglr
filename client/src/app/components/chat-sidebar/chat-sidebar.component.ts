@@ -71,6 +71,7 @@ export class ChatSidebarComponent implements AfterViewInit,OnInit {
   openChatWindow(user:User)
   {
     this.chatService.currentOpenedChat.set(user);
+    
     this.chatService.loadMessages(1);
   }  
 
